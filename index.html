@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Shad0wRa1n OS</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000; /* Black Background */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .loading-container {
+            text-align: center;
+            color: #ffffff; /* White text */
+        }
+        .xp-logo {
+            width: 50px; /* Decreased size */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .progress-bar-container {
+            width: 300px;
+            height: 30px;
+            background-color: #000000; /* Black background for progress bar container */
+            border: 1px solid #ffffff; /* White border */
+            border-radius: 5px;
+            margin: 0 auto 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #ffffff; /* White progress bar */
+            border-radius: 5px;
+            animation: progress 30s linear infinite;
+        }
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 50%; }
+            100% { width: 100%; }
+        }
+        .status-text {
+            font-size: 18px;
+            margin-top: 20px;
+            opacity: 0.9;
+            font-weight: bold;
+        }
+        .dots-container {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ffffff;
+        }
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        .dot:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <!-- Apple Logo -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="Apple Logo" class="xp-logo">
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+        
+        <!-- Animated Dots -->
+        <div class="dots-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        
+        <!-- Status Text -->
+        <div class="status-text">Installing Shad0wRa1n OS...</div>
+    </div>
+</body>
+</html>
